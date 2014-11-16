@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+    <link href="css/jquery.atwho.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+      
+    <div class="container" style="padding:20px">
+    <div class="row">  
+        <form role="form">
+          <div class="form-group">
+            <H4>Summary</H4>
+              <textarea id="emailInputor" 
+                        class="form-control inputor" 
+                        rows="3"> this is @Jacob 's stuff
+              </textarea>
+              <div>
+                <ul id="emailInputor-tags" class="list-unstyled"></ul>
+              </div>
+          </div>
+            
+            <!-- <h4> The Food </h4>
+            <div class="form-group">
+            <label for="theFood">Starters</label>
+              <div      id="theFood" 
+                        contenteditable="true"
+                        class="form-control inputor" 
+                        rows="3" 
+                        placeholder="140 chars">
+              </div>
+              <ul id="theFood-tags" class="list-unstyled"></ul>
+            </div>
+            
+            <div class="form-group">
+            <label for="exampleInputEmail1">Main course</label>
+              <textarea id="exampleInputEmail1" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="140 chars">
+              </textarea>
+            </div>
+            
+            <div class="form-group">
+            <label for="exampleInputEmail1">Drinks</label>
+              <textarea id="exampleInputEmail1" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="140 chars">
+              </textarea>
+            </div>
+            
+            <div class="form-group">
+            <label for="exampleInputEmail1">Sweet</label>
+              <textarea id="exampleInputEmail1" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="140 chars">
+              </textarea>
+            </div>
+            
+            <div class="form-group">
+            <H4>The Place</H4>
+              <textarea id="exampleInputEmail1" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="140 chars">
+              </textarea>
+            </div>
+            
+            <div class="form-group">
+            <H4>Special Mentions</H4>
+              <textarea id="exampleInputEmail1" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="140 chars">
+              </textarea>
+            </div>
+            
+            <div class="form-group">
+            <H4>The Price</H4>
+              <textarea id="exampleInputEmail1" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="140 chars">
+              </textarea>
+            </div>
+          <button type="submit" class="btn btn-default">Submit</button>-->        
+          </form>
+    </div>
+    </div>
+
+    
+
+   <script>
+       String.prototype.format = function() {
+          var args = arguments;
+          return this.replace(/{(\d+)}/g, function(match, number) { 
+            return typeof args[number] != 'undefined'
+              ? args[number]
+              : match
+            ;
+          });
+        };
+   </script>
+   <div style="display:none">
+   <div id="tagTemplate">
+        <li id="{0}" class="tagContainer">
+            <button id="tagName" type="button" class="btn btn-primary">{0}</button>
+            <div class="dropdown inline" style="display:none">
+              <button class="btn btn-default dropdown-toggle" type="button" id="tagType" data-toggle="dropdown">{1}<span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="tagType">
+                <li><a href="#">Starter</a></li>
+                <li><a href="#">Drinks</a></li>
+                <li><a href="#">Combo</a></li>
+                <li><a href="#">Something else</a></li>
+                <li><a href="#">Main Course</a></li>
+              </ul>
+            </div>
+
+            <div class='inline'>
+              <input type="text" 
+              id="slider-{0}"
+              class="span2 myslider2" 
+              value="" 
+              data-slider-min="-5" 
+              data-slider-max="5" 
+              data-slider-step="1" 
+              data-slider-value="{2}" 
+              data-slider-orientation="horizontal" 
+              data-slider-selection="after"
+              data-slider-tooltip="show">
+              <span id="slider-{0}-val"></span> / 5
+            </div>
+        </li>
+    </div>  
+    </div>
+      
+   
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.atwho.js"></script>
+    <script src="assets/js/jquery.caret.js"></script>
+    <script src="assets/js/bootstrap-slider.js"></script>
+    <script>
+        $(function(){
+            // set dropdown text = clicked list item
+            $(document).on('click', '.dropdown-menu li a', function(){
+              $(this).parents(".dropdown").find('.btn').text($(this).text());
+              $(this).parents(".dropdown").find('.btn').val($(this).text());
+            });
+
+            // $(".myslider").slider().on('slide', function(){
+            //   console.log(this);
+            // });
+        
+        });
+    </script>
+    <script type="text/javascript">
+    saveTargetIds = [
+        'emailInputor',
+        'theFood'
+        ];
+    
+    function saveVals(elems){
+        elems.forEach(function(id){
+            var el = $("#"+id);
+            localStorage.setItem(id, el.is('textarea')?el.val():el.text());
+
+            var el_tags = $("#"+id+"-tags");
+
+            var tagData = {};
+            var v = el_tags.children('.tagContainer').each(
+              function(index, _tagEl){
+                var el = $(_tagEl);
+                var id = _tagEl.id;
+                
+                var valuesToSave ={};
+                valuesToSave.type = el.find('#tagType').text();
+                
+                var slider = $(el.find('#slider-'+id));
+                
+                console.log(slider);
+
+                if(slider){
+                  // console.log(id + "----------> " + slider.val());
+                  valuesToSave.rating = slider.attr('data-slider-value');
+                  console.log(id + "----------> " + slider.attr('data-slider-value'));
+                }
+                
+                // tagData[el.find('#tagName').text()] = valuesToSave;
+                tagData[id] = valuesToSave;
+                console.log(id + "=" + valuesToSave.rating);
+            });
+            // console.log(' saved tagData ->' +id+"-tagData");
+            // console.log(tagData);
+            localStorage.setItem(id+"-tagData",JSON.stringify(tagData));
+            // console.log(v);
+        });
+    }
+        
+    function restoreVals(elems){
+        elems.forEach(function(id){
+            var el = $("#"+id);
+            el.text(localStorage.getItem(id));
+        });
+    }
+        
+  // tag_template = function(val){
+  //     return '<li>'
+  //           +'<button type="button" class="btn btn-primary">'
+  //           +val
+  //           +'</button>'
+  //           +'</li>';
+  // };
+        
+  $(function(){
+    setInterval(function(){saveVals(saveTargetIds)}, 5000);
+    var emojis = [
+      "smile", "iphone", "girl", "smiley", "heart", "kiss", "copyright", "coffee",
+      "a", "ab", "airplane", "alien", "ambulance", "angel", "anger", "angry",
+      "arrow_forward", "arrow_left", "arrow_lower_left", "arrow_lower_right",
+      "arrow_right", "arrow_up", "arrow_upper_left", "arrow_upper_right",
+      "art", "astonished", "atm", "b", "baby", "baby_chick", "baby_symbol",
+      "balloon", "bamboo", "bank", "barber", "baseball", "basketball", "bath",
+      "bear", "beer", "beers", "beginner", "bell", "bento", "bike", "bikini",
+      "bird", "birthday", "black_square", "blue_car", "blue_heart", "blush",
+      "boar", "boat", "bomb", "book", "boot", "bouquet", "bow", "bowtie",
+      "boy", "bread", "briefcase", "broken_heart", "bug", "bulb",
+      "person_with_blond_hair", "phone", "pig", "pill", "pisces", "plus1",
+      "point_down", "point_left", "point_right", "point_up", "point_up_2",
+      "police_car", "poop", "post_office", "postbox", "pray", "princess",
+      "punch", "purple_heart", "question", "rabbit", "racehorse", "radio",
+      "up", "us", "v", "vhs", "vibration_mode", "virgo", "vs", "walking",
+      "warning", "watermelon", "wave", "wc", "wedding", "whale", "wheelchair",
+      "white_square", "wind_chime", "wink", "wink2", "wolf", "woman",
+      "womans_hat", "womens", "x", "yellow_heart", "zap", "zzz", "+1",
+      "-1"
+    ]
+    var jeremy = decodeURI("J%C3%A9r%C3%A9my") // Jérémy
+    var names = ["Akshada", "Chicken curry", "Jacob","Isabella","Ethan","Emma","Michael","Olivia","Alexander","Sophia","William","Ava","Joshua","Emily","Daniel","Madison","Jayden","Abigail","Noah","Chloe","你好","你你你", jeremy];
+
+    var names = $.map(names,function(value,i) {
+      return {'id':i,'name':value,'email':value+"@email.com"};
+    });
+    var emojis = $.map(emojis, function(value, i) {return {key: value, name:value}});
+
+    var at_config = {
+      at: "@",
+      data: names,
+      tpl: "<li data-value='@${name}'>${name} <small>${email}</small></li>",
+      show_the_at: true
+    }
+    var emoji_config = {
+      at: ":",
+      data: emojis,
+      tpl:"<li data-value=':${key}:'>${name} <img src='https://assets-cdn.github.com/images/icons/emoji/${key}.png'  height='20' width='20' /></li>",
+      insert_tpl: "<img src='https://assets-cdn.github.com/images/icons/emoji/${name}.png'  height='20' width='20' />",
+      delay: 400
+    }
+    $inputor = $('.inputor').atwho(at_config).atwho(emoji_config);
+    $inputor.on("inserted.atwho", function(event,$li) {
+        // console.log("inserted ");
+        // console.log(event);
+        // console.log($li);
+        // console.log(this.id);
+        // console.log(this.text().match(/@\S+/g));
+        // console.log($(this).text().match(/@\S+/g));
+//        $("#"+this.id+'-tags').append('<li><button type="button" class="btn btn-primary">'+$li.attr('data-value')+'</button></li>')
+        $("#"+this.id+'-tags').append(tag_template($li.attr('data-value')));
+      });
+    $inputor.focus().atwho('run');
+     
+      $('.inputor').each(function(index, _el){
+                var el = $(_el);
+                el.on('input', function(x) {
+                    console.log(x);
+                });
+                
+     });
+    
+    setInterval(function(){
+        $('.inputor').each(function(index, _el){
+            var el = $(_el);
+            var id = el.attr('id');
+            var txt = el.is('textarea')?el.val():el.text();
+            var matches = txt.match(/#\S+/g);
+            el.id = el.attr('id');
+            tagsEl = $("#"+el.id+"-tags");
+            // tagsEl.empty();
+            var allChildren = tagsEl.children();
+//            console.log("remove dnd attr for -> " + allChildren.length);
+            var childrenToDelete = allChildren.each(function(i, _el){
+//                console.log(_el);
+                el = $(_el)
+                el.removeAttr('do-not-delete')
+//                console.log(el);
+            });
+            
+            var tagData = localStorage.getItem(id+"-tagData");
+            if(tagData){
+              tagData = JSON.parse(tagData);
+            }
+             // tagData = {ChickenCrispy: "Starter", ManchowSoup: "Something nice...", VegCombo: "Something nice...", FriedRice: "Something nice...", pepsi: "Something nice..."};
+             // console.log('tagData <--' + typeof tagData);
+             // console.log(tagData);
+            var tagTemplate = $("#tagTemplate").html();
+            for(match in matches){
+                var clean_id = matches[match].replace(/[^a-zA-Z0-9]/g,'');
+
+                var children = tagsEl.children('#'+clean_id);
+                var create_flag = (!children || children.length < 1);
+
+                if(create_flag){
+                    console.log("create_flag");
+                    console.log("{0} -> " + clean_id);
+                    console.log("{1} -> " + ((tagData[clean_id] && tagData[clean_id].type) || 'Something nice...'));
+                    console.log("{2} -> " + ((tagData[clean_id] && tagData[clean_id].rating) || 0));
+                    var template = $(tagTemplate.format(
+                      clean_id, /* {0} */
+                      ((tagData[clean_id] && tagData[clean_id].type) || 'Something nice...'), /* {1} */
+                      ((tagData[clean_id] && tagData[clean_id].rating) || 0) /* {2} */
+                      ));
+                    // console.log("template --> ");
+                    // console.log(template);
+                    template.attr('do-not-delete', 'true');
+//                    console.log("added dnd for -> " + clean_id);
+                    tagsEl.append(template);
+
+                     template.find("#slider-"+clean_id).slider().on('slide', function(ev){
+                          // console.log(this.id);
+                          // console.log(ev);
+                          console.log($("#"+this.id+"-val"));
+                          console.log('on slide value --------> ' + ev.value);
+                          var text = "";
+                          switch(ev.value){
+                            case 0: text = "?";
+                            break;
+                            case 1: text = "I was too hungry";
+                            break;
+                            case 2: text = "Passable";
+                            break;
+                            case 3: text = "Ok ok";
+                            break;
+                            case 4: text = "Delicious";
+                            break;
+                            case 5: text = "Awesssssooommeee!";
+                            break;
+                            default:
+                            text = ev.value;
+                          }
+                          $("#"+this.id+"-val").text(text);
+                          $("#"+this.id+"-val").attr('data-slider-value', ev.value);
+                     });
+            
+                }else{
+                    children.each(function(id, _el){
+                        var el = $(_el);
+                        el.attr('do-not-delete', 'true');
+                    });
+//                    console.log('skip -> ' + clean_id);
+                }
+            };
+            
+            var childrenToDelete = tagsEl.children().not("[do-not-delete='true']");
+//            console.log("dnd -> " + childrenToDelete.length);
+//            console.log(childrenToDelete);
+            childrenToDelete.remove();
+            
+        });
+    }, 1000);
+    restoreVals(saveTargetIds);
+  });
+    </script>
+  </body>
+</html>
